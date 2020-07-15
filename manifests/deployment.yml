@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: angularwedpm 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: angularwedpm 
+    spec:
+      containers:
+        - name: angularwedpm 
+          image: jccontainerreg.azurecr.io/angularwedpm
+          ports:
+          - containerPort: 80
