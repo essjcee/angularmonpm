@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: angulardemosat 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: angulardemosat 
+    spec:
+      containers:
+        - name: angulardemosat 
+          image: jccontainerreg.azurecr.io/angulardemosat
+          ports:
+          - containerPort: 80
