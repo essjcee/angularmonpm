@@ -1,9 +1,14 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: angulardemosat 
+  name: angulardemosat
+  labels:
+    app: angulardemosat
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: angulardemosat
   template:
     metadata:
       labels:
